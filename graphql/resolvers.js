@@ -1,12 +1,9 @@
-const jeongmee = {
-  name: "jeongmee",
-  age: 26,
-  gender: "female"
-}
+import {people, getById} from "./db"
 
 const resolvers = {
   Query: {
-    person: function() {return jeongmee}
+    people: () => people,
+    person: (_, { id }) => getById(id)
   }
 };
 
