@@ -1,6 +1,12 @@
+const jeongmee = {
+  name: "jeongmee",
+  age: 26,
+  gender: "female"
+}
+
 const resolvers = {
   Query: {
-    name: () => "nicolas"
+    person: function() {return jeongmee}
   }
 };
 
